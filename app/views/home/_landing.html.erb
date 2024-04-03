@@ -1,12 +1,12 @@
 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
     <div class="grid grid-cols-1 md:grid-cols-2">
         <div class="flex flex-col place-content-center items-center md:items-start py-16">
-            <h1 class="text-6xl font-light leading-7 text-black">Notecol</h1>
+
+                <%=link_to 'Notecol', root_path, class: "text-6xl font-light leading-7 text-black" %>
+
             <h2 class="mt-6 text-2xl font-light leading-2 text-black">Effortlessly organize your notes </h2>
-            <div>
-                <button class="mt-8 border border-black rounded-md py-2 hover:-ml-1 hover:mt-7 px-6 hover:border-b-4 hover:border-r-4">
-                    Get Started
-                </button>
+            <div class="mt-8">
+                <%=link_to 'Get Started', new_user_registration_path, class: "text-xl border border-black rounded-md py-2 hover:-ml-1 hover:mt-1 px-6 hover:border-b-4 hover:border-r-4"%>
             </div>
         </div>
 
