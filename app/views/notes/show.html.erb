@@ -1,15 +1,14 @@
-<div class="mx-auto md:w-2/3 w-full flex">
-  <div class="mx-auto">
-    <% if notice.present? %>
-      <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
-    <% end %>
-
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
+  <div class="flex flex-col py-8">
     <%= render @note %>
-
-    <%= link_to "Edit this note", edit_note_path(@note), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
-    <div class="inline-block ml-2">
-      <%= button_to "Destroy this note", note_path(@note), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
+    <div class="flex">
+      <%= link_to "Edit this note", edit_note_path(@note), class: "border border-black mt-2 bg-black text-white rounded-md py-3 px-6 hover:bg-gray-700" %>
+      <%= link_to "Back to notes", notes_path, class: "ml-2 border border-black mt-2 bg-black text-white rounded-md py-3 px-6 hover:bg-gray-700" %>
     </div>
-    <%= link_to "Back to notes", notes_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+
+
+    <div class="mt-8">
+      <%= button_to "Destroy this note", note_path(@note), method: :delete, class: "border border-red-500 bg-red-500 rounded-md py-2 px-6 hover:bg-gray-200" %>
+    </div>
   </div>
 </div>

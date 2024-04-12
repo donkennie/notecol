@@ -1,22 +1,12 @@
-<div id="<%= dom_id note %>">
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Title:</strong>
+<div id="<%= dom_id note %>" class="border border-black rounded-md p-4 <%= note.color %>">
+  <p class="text-3xl px-4 font-light">
     <%= note.title %>
   </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Description:</strong>
+  <div class="border-t w-full border-black p-4"></div>
+
+  <p class="text-base px-4">
     <%= note.description %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Color:</strong>
-    <%= note.color %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">User:</strong>
-    <%= note.user_id %>
   </p>
 
   <% if action_name != "show" %>
