@@ -28,25 +28,58 @@
 
   <div class="flex flex-col my-4">
     <%= form.label :color, 'Select color' %>
-    <div class="flex gap-4">
+    <div class="flex gap-4 my-1">
     <label class="flex gap-1 items-center">
-      <%= form.radio_button :color, 'bg:amber-300' %>
-      <div class="bg-amber-300 h-8 w-8 rounded">
+      <%= form.radio_button :color, 'bg:amber-300', class:'hidden' %>
+      <div class="color-option bg-amber-300 h-8 w-8 rounded">
+      </div>
+    </label>
+
+    <label class="flex gap-1 items-center">
+      <%= form.radio_button :color, 'bg:blue-300', class:'hidden' %>
+      <div class="color-option bg-blue-300 h-8 w-8 rounded">
+      </div>
+    </label>
+
+    <label class="flex gap-1 items-center">
+      <%= form.radio_button :color, 'bg:red-300', class:'hidden' %>
+      <div class="color-option bg-red-300 h-8 w-8 rounded">
+      </div>
+    </label>
+
+    <label class="flex gap-1 items-center">
+      <%= form.radio_button :color, 'bg:lime-300', class:'hidden' %>
+      <div class="color-option bg-lime-300 h-8 w-8 rounded">
+      </div>
+    </label>
+
+    <label class="flex gap-1 items-center">
+      <%= form.radio_button :color, 'bg:teal-300', class:'hidden' %>
+      <div class="color-option bg-teal-300 h-8 w-8 rounded">
+      </div>
+    </label>
+
+    <label class="flex gap-1 items-center">
+      <%= form.radio_button :color, 'bg:violet-300', class:'hidden' %>
+      <div class="color-option bg-violet-300 h-8 w-8 rounded">
       </div>
     </label>
 </div>
-
-
-  <div class="flex gap-4">
-      <label class="flex gap-1 items-center">
-        <%= form.radio_button :color, 'bg:blue-300' %>
-        <div class="bg-blue-300 h-8 w-8 rounded">
-        </div>
-      </label>
   </div>
-</div>
 
   <div class="inline">
     <%= form.submit class: "border border-black mt-2 bg-black text-white rounded-md py-3 px-6 hover:bg-gray-700" %>
   </div>
 <% end %>
+
+<style>
+
+.color-option{
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + .color-option{
+  border: 2px solid black
+}
+
+</style>
